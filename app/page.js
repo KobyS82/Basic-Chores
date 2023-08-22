@@ -1,20 +1,52 @@
+import {FaDeleteLeft, FaBeer } from 'react-icons/fa';
+import {AiFillDelete} from 'react-icons/ai';
+
 export default function Home() {
   return (
-    <main className="bg-slate-400 text-center">
+    <main className="bg-slate-400 h-screen text-center p-4">
       <header>
-        <h1 className="p-4">Chore Tracker!</h1>
+        <h1 className="p-4 font-bold underline text-2xl">Chore Tracker!</h1>
       </header>
-      <div className="flex flex-col ">
-        <ul className="flex bg-slate-900 w-screen flex-col content-center text-center">
-          <li>Wash Dishes</li>
-          <li>Take out Trash</li>
-          <li>Feed the Dog</li>
+
+      <div id='Chores' className="flex flex-col p-2 bg-slate-600">
+        <h2 className="text-lg">Chores</h2>
+        <ul className="p-1">
+          <li className=" flex justify-between">
+            <div className='left'>
+              <label htmlFor="Chore">Walk dog</label>
+            </div>
+            <div className='right flex'>
+              <input type="checkbox" id="Chore" name="Chore" className="bg-slate-800 submit"/>
+              <button className='p-1 hover:text-red-400'><AiFillDelete/></button>
+            </div>
+          </li>
+          <li className=" flex justify-between">
+            <div className='left'>
+              <label htmlFor="Chore">Dishes</label>
+            </div>
+            <div className='right flex'>
+              <input type="checkbox" id="Chore" name="Chore" className="bg-slate-800 submit"/>
+              <button className='p-1 hover:text-red-400'><AiFillDelete/></button>
+            </div>
+          </li>
+          <li className=" flex justify-between">
+            <div className='left'>
+              <label htmlFor="Chore">Feed Cats</label>
+            </div>
+            <div className='right flex'>
+              <input type="checkbox" id="Chore" name="Chore" className="bg-slate-800 submit"/>
+              <button className='p-1 hover:text-red-400'><AiFillDelete/></button>
+            </div>
+          </li>
         </ul>
-        <ul className="flex bg-slate-800 w-screen flex-col text-center">
-          <li>Test Wash Dishes</li>
-          <li>Test Take out Trash</li>
-          <li>Test Feed the Dog</li>
-        </ul>
+
+        {/* User adds chore to list */}
+        <section className="p-2">
+          <div className="flex justify-center hover:underline hover:font-bold  text-blue-400">
+            <button>Add Chore</button>
+          </div>
+        </section>
+
         
       </div>
     </main>
@@ -39,3 +71,11 @@ export default function Home() {
 //           <h2>Chore List</h2>
 //         </div>
 //     </main>
+
+
+{/* <ul className="flex bg-slate-900 flex-col content-center text-center">
+          <li>Wash Dishes</li>
+          <button className="bg-slate-800">Complete</button>
+          <li>Take out Trash</li>
+          <li>Feed the Dog</li>
+        </ul> */}
